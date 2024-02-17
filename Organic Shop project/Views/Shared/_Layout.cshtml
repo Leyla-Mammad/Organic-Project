@@ -1,0 +1,154 @@
+﻿@using Organic_Shop_project.ViewModels.Home;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Organicstore</title>
+</head>
+<body style="margin: 0;padding: 0;box-sizing: border-box;overflow-x: hidden;width: 100%;">
+    <section class="navbar">
+        <div class="container ">
+            <div class="row" style="width:100%; display: flex; justify-content: center;align-items: center; ">
+                <div class="leftside col-lg-5 col-sm-5" style="display: flex; justify-content: space-between; align-items: center;">
+                    <a class="home-logo col-lg-5" asp-controller="home" asp-action="index"><img style="width: 90%;" src=".\src\img\organic-store-logo5.svg"></a>
+
+                    <div class="col-lg-6" style=" display: flex;justify-content: space-around; align-items: center;">
+                        <a style="color: #011929;  font-size: 17px;" class="col-lg-2" asp-controller="Shop" asp-action="index">Shop</a>
+                        <a style="color: rgb(0, 0, 0);  font-size: 17px;" class="col-lg-2" asp-controller="About" asp-action="index">About</a>
+                        <a style="color: #011929;  font-size: 17px;" class="col-lg-2" asp-controller="Contact" asp-action="index">Contact</a>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="middle col-lg-1 col-sm-1"></div>
+                <div class="middle col-lg-4 col-sm-4">
+                </div>
+                <div class="rightside col-lg-2 col-sm-2" style="display: flex; justify-content: space-around; align-items: center;">
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            <span>@User.Identity.Name</span>
+                            <a asp-action="log-out" asp-controller="Account" style="color: #0b9710;" ><i class="bx bx-log-out bx-sm bx-tada-hover text-primary"></i></a>
+
+                        }
+                        else
+                        {
+                            <a asp-action="login" asp-controller="Account" style="color: #0b9710;"><i class="bx bx-log-in bx-sm bx-tada-hover text-primary"></i></a>
+
+                            
+                        }
+                    }
+                    <a style="color: #0b9710;" ><i class="fa-solid fa-heart"></i></a>
+                    <a asp-action="index" asp-controller="Basket" style="color: #0b9710;"><i class="fa-solid fa-basket-shopping"></i></a>
+                    <a asp-action="login" asp-controller="Account" style="color: #0b9710;;" ><i class="fa-solid fa-user"></i></a>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    @RenderBody()
+
+    <section class="footer-types" style=" background-color: #011929; padding: 80px 0 30px 0; color: white;">
+        <div class="container ">
+            <div class="row" style="padding: 0 50px ;">
+
+                <div class="col-4 col-sm-4">
+                    <img class="logo-footer" style="width: 45%;" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/organic-store-white-logo.png">
+                    <h5 style="margin: 30px 0; opacity: 50%; font-style: italic; font-size: 18px;">Maecenas mi justo, interdum at consectetur vel, tristique et arcu. Ut quis eros blandit, ultrices diam in, elementum ex. Suspendisse quis faucibus urna. Suspendisse pellentesque.</h5>
+                </div>
+
+                <div class="col-2 col-sm-2"></div>
+
+
+                <div class="col-2 col-sm-2 foot-a">
+                    <h3 style="font-size: 24px; padding: 0 0 40px 0;">Quick Links</h3>
+                    <div class="quicklinks" style=" display: flex;   flex-direction: column;">
+                        <a href="about.html">About</a>
+                        <a href="cart.html">Cart</a>
+                        <a href="checkout.html">Checkout</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="index.html">Home</a>
+                        <a href="myaccount.html">My Account</a>
+                        <a href="shop.html">Shop</a>
+                    </div>
+                    <h3 style="font-size: 24px; margin: 40px 0;">Site Links</h3>
+                    <div class="quicklinks" style="display: flex;   flex-direction: column; color: white;">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Shipping Details</a>
+                        <a href="#">Offers Coupons</a>
+                        <a href="#">Terms & Conditions</a>
+                    </div>
+                </div>
+                <div class="col-1 col-sm-1"></div>
+
+
+                <div class="col-3 col-sm-3">
+                    <h1 style="font-size: 24px; font-size: 24px;">Download Our Mobile App</h1>
+                    <h4 style="font-size: 18px; opacity: 80%; margin: 30px 0 50px 0; font-weight: 300;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam gravida sollicitudin. Praesent porta enim mi, non tincidunt libero interdum sit amet.</h4>
+
+                    <h3 style="font-size: 24px; padding: 0 0 20px 0;">Quick Links</h3>
+                    <div class="quicklink" style="display: flex; flex-direction: column; color: #6a9739 !important;">
+                        <a style="color: #6a9739 !important;" href="#">Know More About Us</a>
+                        <a style="color: #6a9739 !important;" href="#">Visit Store</a>
+                        <a style="color: #6a9739 !important;" href="#">Let’s Connect</a>
+                        <a style="color: #6a9739 !important;" href="#">Locate Stores</a>
+                    </div>
+
+                    <img style="width: 45%; padding: 30px 0 50px 0;" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/play-store.png" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                    <img style="width: 45%; padding: 30px 0 50px 0;" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/app-store.png" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+    <section class="socialmedia" style="background-color: #011929; padding-bottom: 50px;">
+        <div class="container" style="display: flex; justify-content: space-around; align-items: center;">
+            <div class="col-lg-5">
+                <span style=" background-color:#011929; color: rgb(146, 145, 145);">Copyright © 2024 | Organic Store</span>
+            </div>
+            <div class="col-lg-5"></div>
+            <div class="col-lg-2" style="display: flex;justify-content: space-around; align-items: center; background-color:#011929; color: rgb(228, 228, 228);">
+                <a class="socialmedia-icons color-white" href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a class="socialmedia-icons" href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a class="socialmedia-icons" href="#"> <i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+
+        </div>
+
+    </section>
+    <style>
+        .footer-types a {
+            color: white;
+        }
+
+        body a {
+            text-decoration: none !important;
+        }
+
+        .socialmedia a {
+            color: rgb(170, 169, 169);
+        }
+
+        .middle-img::before:hover {
+            position: absolute;
+            --background-overlay: '';
+            background-color: var(--e-global-color-astglobalcolor2);
+        }
+
+        .rightside:hover {
+            color: #0b9710;
+        }
+    </style>
+</body>
+</html>

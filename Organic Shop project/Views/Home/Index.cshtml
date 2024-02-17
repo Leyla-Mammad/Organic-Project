@@ -1,0 +1,217 @@
+﻿@using Organic_Shop_project.ViewModels.Home;
+@model HomeIndexViewModel;
+
+<section>
+
+
+
+
+    @if (Model.Cards != null && Model.Cards.Count > 0)
+    {
+        @foreach (var card in Model.Cards)
+
+
+        {
+            <div class="col-lg-3 farm" style="padding: 70px 25px; background-image: url(~@card.FilePath); background-size: cover; border: solid 1px rgb(255, 255, 255);">
+                <h3>@card.Name</h3>
+                <h6 style="font-weight: 400; font-size:16px; color: #4c4c4d;">@card.Description></h6>
+                <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i class="fa-solid fa-cart-shopping" style="padding-right: 10px;"></i>SHOP NOW</span></button>
+            </div>
+            
+
+            
+        }
+
+    }
+
+   
+
+
+
+
+</section>
+
+<section class="home-product" style="background-color: rgb(251, 251, 244); padding: 150px 0;">
+    <div class="container">
+        <div class="row">
+
+            <div class=" col-5 home-product-img">
+                <img class="title-img" src=".\src\img\organic-products-hero-600x514.png" alt="">
+            </div>
+            <div class="col-1"></div>
+            <div class=" col-5 home-product-description" style="margin-top: 50px;">
+                <img style="padding:0 0  50px 0;" src=".\src\img\logo-leaf-new.png" alt="">
+                <div><h4 style="font-size: large;">Best Quality Products</h4></div>
+                <div><h1 style="font-size: 60px; font-weight: 500; margin: 20px 0;">Join The Organic Movement!</h1></div>
+
+                <h6 style="font-size: medium; font-weight: 400;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h6>
+                <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i style="padding-right: 10px;" class="fa-solid fa-cart-shopping"></i>SHOP NOW</span></button>
+            </div>
+        </div>
+
+
+</section>
+
+<SECtion class="boxes" style="background-color: black; padding: 50px 50px;">
+    <div class="container " style="padding: 1px 75px;">
+        <div class="row" style="display: flex; justify-content: space-between;color: white;">
+            <div class="col-lg-3" style=" background-color: rgb(47, 47, 47); padding: 40px 20px; font-size: 23px;">
+                <a style="color: white;" href="#"><i style="color: #80d426; padding-right: 10px;" class="fa-solid fa-truck"></i>Free Shipping</a>
+                <h6 style="padding: 0 29px;">Above $5 Only</h6>
+            </div>
+            <div class="col-lg-3" style="background-color: rgb(47, 47, 47); padding: 40px 20px; font-size: 23px;">
+                <a style="color: white;" href="#"><i style="color: #80d426; padding-right: 10px;" class="fa-regular fa-address-book"></i>Certified Organic</a>
+                <h6 style="padding: 0 25px;">100% Guarantee</h6>
+            </div>
+            <div class="col-lg-3" style="background-color: rgb(47, 47, 47); padding: 40px 20px; font-size: 23px;">
+                <a style="color: white;" href="#"><i style="color: #80d426; padding-right: 10px;" aria-hidden="true" class="far fa-money-bill-alt"></i>Huge Savings</a>
+                <h6 style="padding: 0 29px;">At Lowest Price</h6>
+            </div>
+            <div class="col-lg-3" style="background-color: rgb(47, 47, 47); padding: 40px 20px; font-size: 23px;">
+                <a style="color: white;" href="#"><i style="color: #80d426; padding-right: 10px;" aria-hidden="true" class="fas fa-recycle"></i>Easy Returns</a>
+                <h6 style="padding: 0 25px;">No Questions Asked</h6>
+            </div>
+        </div>
+    </div>
+
+
+
+</SECtion>
+
+
+<section style="text-align: center; margin: 130px 0 ; font-weight: 900;">
+
+    <h1>Best Selling Products</h1>
+    <img style="width: 5%;margin: 20px 0 0 0;" src=".\src\img\logo-leaf-new.png" alt="">
+
+
+    <div style="margin-bottom: -160px;  " class="producttypes-img">
+        <img style="width: 150px;" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/basil-leaf.png" alt="">
+    </div>
+</section>
+
+
+
+<section class="product-types " style="background-color: rgb(249, 245, 239); padding: 100px 0;">
+
+
+    <div class="container">
+        <div class="row" style="display: flex; justify-content: space-evenly; align-items: center; padding:0 50px;">
+            <div class="col-lg-3 farm" style="padding: 70px 25px; background-image: url(../img/product11-free-img.jpg); background-size: cover; border: solid 1px rgb(255, 255, 255);">
+                <h3>Farm Fresh Fruits</h3>
+                <h6 style="font-weight: 400; font-size:16px; color: #4c4c4d;">Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</h6>
+                <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i class="fa-solid fa-cart-shopping" style="padding-right: 10px;"></i>SHOP NOW</span></button>
+            </div>
+            <div class="col-lg-3" style="padding: 70px 25px;  background-image: url(../img/product13-free-img.jpg); background-size: cover; border: solid 1px white;">
+                <h3>Fresh Vegetables</h3>
+                <h6 style="font-weight: 400; font-size:16px; color: #4c4c4d;">Aliquam porta justo nibh, id laoreet sapien sodales vitae justo. </h6>
+                <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i style="padding-right: 10px;" class="fa-solid fa-cart-shopping"></i>SHOP NOW</span></button>
+            </div>
+            <div class="col-lg-3" style="padding: 70px 25px; background-image: url(../img/product17-free-img.jpg); background-size: cover; border: solid 1px white;">
+                <h3>Organic Legume</h3>
+                <h6 style="font-weight: 400; font-size:16px; color: #4c4c4d;">Phasellus sed urna mattis, viverra libero sed, aliquam est.</h6>
+                <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i style="padding-right: 10px;" class="fa-solid fa-cart-shopping"></i>SHOP NOW</span></button>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+<section class="product-sale" style="background-color: black; padding: 40px 170px; display: flex; justify-content: space-between;align-items: center;">
+
+    <span class="col-lg-6" style="color: white; font-size: 35px; font-weight: 500;">Get 25% Off On Your First Purchase!</span>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-2">
+        <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i style="padding-right: 10px;" class="fa-solid fa-cart-shopping"></i>SHOP NOW</span></button>
+    </div>
+</section>
+
+<div style=" color: black ; width: 100%; display: flex; justify-content: center; margin-top: -50px;"><i style="font-size: 80px !important;" class="fa-solid fa-caret-down"></i></div>
+
+
+<section style="text-align: center; background-color: rgb(243, 238, 232); padding: 25px; margin-top: -40px;">
+    <h3>Try It For Free. No Registration Needed.</h3>
+</section>
+
+<section class="trending-products" style="text-align: center; margin: 130px 0 ;">
+    <h3 style=" font-weight: 500; font-size: 40px;">Trending Products</h3>
+    <img style="width: 5%;margin: 20px 0 0 0;" src=".\src\img\logo-leaf-new.png" alt="">
+
+</section>
+
+
+<section class="customer-reviews" style="background-color: rgb(252, 248, 244); padding: 30px 0 10px 0;">
+    <div style="text-align: center; margin: 130px 0 ; ">
+        <h3 style=" font-weight: 500; font-size: 40px;">Customers Reviews</h3>
+        <img style="width: 5%;margin: 20px 0 0 0;" src=".\src\img\logo-leaf-new.png" alt="">
+
+    </div>
+
+    <div class="container text-center">
+        <div class="row" style="display: flex; justify-content: space-evenly;align-items: center;">
+            <div class="col-lg-3 col-sm-3" style="border: solid 1px white; background-color: white; padding: 50px 0;">
+                <div style="color:rgb(255, 191, 0); margin: 5px;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h6 style="padding: 10px 40px; line-height: 25px;font-weight: 400; color: #6e6e6e;">Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h6>
+                <img style="width: 15%;" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/client02-free-img.png" srcset="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/client02-free-img.png 60w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/client02-free-img-17x17.png 17w" sizes="(max-width: 60px) 100vw, 60px">
+                <span>Mila Kunis</span>
+            </div>
+            <div class="col-lg-3 col-sm-3 middle-img" style="position: relative; padding: 60px 0 20px 0; margin-top: -80px;border-radius: 10px; background-image: url(https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/sydney-rae-668606-unsplash.jpg);background-size: cover;">
+                <h3 style="margin: 0 35px 0 35px; color: white; font-size:35px;">Deal Of The Day 15% Off On All Vegetables!</h3>
+                <h6 style="margin:20px 20px 80px 20px; color: white;">I am text block. Click edit button to change this tex em ips.</h6>
+
+                <button style="background-color: #6a9739; padding:10px 30px; margin: 0 0 30px 0; border: none ; border-radius: 5px;"><span style="color: white;"><i style="padding-right: 10px;" class="fa-solid fa-cart-shopping"></i>SHOP NOW</span></button>
+
+
+            </div>
+            <div class="col-lg-3 col-sm-3" style="border: solid 1px white; background-color: white; padding:50px 0;">
+                <div style="color:rgb(255, 191, 0); margin: 5px;">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h6 style=" padding: 10px 40px; line-height: 25px;font-weight: 400; color: #6e6e6e;">Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</h6>
+                <img style="width: 15%;" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/client01-free-img.png" srcset="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/client01-free-img.png 60w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/07/client01-free-img-17x17.png 17w" sizes="(max-width: 60px) 100vw, 60px">
+                <span>Mike Sendler</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section style="padding: 60px 0; background-color: rgb(252, 248, 242);">
+    <div class="container">
+        <div class="row" style="display: flex;align-items: center; padding:0 100px ;">
+
+            <h4 class="col-lg-2 col-sm-2" style="font-size: 20px;">Featured Brands:</h4>
+            <img class="col-lg-2 col-sm-2" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-4.svg" alt="">
+            <img class="col-lg-2 col-sm-2" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-5.svg" alt="">
+            <img class="col-lg-2 col-sm-2" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-2.svg" alt="">
+            <img class="col-lg-2 col-sm-2" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-3.svg" alt="">
+            <img class="col-lg-2 col-sm-2" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/logo-1.svg" alt="">
+
+        </div>
+    </div>
+
+</section>
+<style>
+    .footer-types a {
+        color: white;
+    }
+
+    body a {
+        text-decoration: none !important;
+    }
+
+    .socialmedia a {
+        color: rgb(170, 169, 169);
+    }
+
+    .middle-img::before:hover {
+        position: absolute;
+        --background-overlay: '';
+        background-color: var(--e-global-color-astglobalcolor2);
+    }
+
+</style>

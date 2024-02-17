@@ -1,0 +1,111 @@
+﻿@using Organic_Shop_project.ViewModels.Shop;
+@model ShopIndexViewModel;
+
+
+
+<section style="background-color: rgb(254, 248, 240); padding: 40px; margin: 30px;">
+    <div class="container">
+        <div class="row">
+
+
+
+            <div class="col-lg-3" style="border: 1px solid black; padding:30px 20px;">
+
+                <div>
+                    <form class="example" action="action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button style="color: #ffffff; background-color: #0b9710; border: none;" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div style="display: block; padding: 50px 0;">
+                    <h3>Product Categories</h3>
+                    @{
+                        foreach (var categories in Model.Categories)
+                        {
+                            <div>
+                                <a style="color: #0b9710; font-size: 18px; " data-filter="@categories.Title"
+                                   href="#"><i style="padding-right: 10px;" class="fa-solid fa-utensils"></i><span>@categories.Title</span></a>
+                            </div>
+                        }
+                    }
+                </div>
+
+                <div>
+                    <h3>Filter by Price</h3>
+                </div>
+
+            </div>
+
+            <div class="col-lg-1"></div>
+            <div class="col-lg-8">
+                <a style="color: black;" href="index.html">Home</a>
+                <span>/ Shop</span>
+                <h1 style="color: #0b9710; margin: 20px 0; font-size: 50px;">SHOP</h1>
+                <ul>
+                    <li>
+                        <div>
+                            <a>
+                     @*            @{
+                                    foreach(var categorycomponent in Model.Categories)
+                                    {
+                                        // foreach (var item in categorycomponent.CategoryComponents)
+                                        // {
+                                        //     case: item.status:
+                                        //         <span class="mkdf-pli-new-product">New</span>
+                                        //         break;
+                                        //          case: ProductStatus.Sale:
+                                        //         <span class="mkdf-pli-on-sale">Sale</span>
+                                        //         break;
+                                        //          case: ProductStatus.Sold:
+                                        //         <span class="mkdf-pli-out-of-stock">Sold</span>
+                                        //         break;
+
+                                        //          case: ProductStatus.None:
+                                        //         break;
+                                        // }
+
+                                        // @{
+                                        //     switch (categorycomponent.CategoryComponents)
+                                        //     {
+                                        //         case: ProductStatus.New:
+                                        //         <span class="mkdf-pli-new-product">New</span>
+                                        //         break;
+                                        //          case: ProductStatus.Sale:
+                                        //         <span class="mkdf-pli-on-sale">Sale</span>
+                                        //         break;
+                                        //          case: ProductStatus.Sold:
+                                        //         <span class="mkdf-pli-out-of-stock">Sold</span>
+                                        //         break;
+
+                                        //          case: ProductStatus.None:
+                                        //         break;
+
+                                        //     }
+                                        // }
+                                        <h3>@categorycomponent.Title></h3
+                                        
+                                    
+                                        <img width="300" height="300"  class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-300x300.jpg 300w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-150x150.jpg 150w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-768x768.jpg 768w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-600x600.jpg 600w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-100x100.jpg 100w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-400x400.jpg 400w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px">
+
+                                    }
+                                } *@
+                            
+                            </a>
+
+
+                        </div>
+
+
+                    </li>
+
+                </ul>
+               
+            </div>
+
+
+
+        </div>
+    </div>
+
+</section>
+ 

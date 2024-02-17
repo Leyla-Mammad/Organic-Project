@@ -1,0 +1,51 @@
+﻿@using Organic_Shop_project.ViewModels.Basket;
+@model BasketIndexVM
+
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <div style="display:flex;justify-content:space-between; align-items: center;margin-bottom:5px;">
+                <h5 class="card-title">Basket</h5>
+             
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Photo</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Action</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var basketProduct in Model.BasketProducts)
+                        {
+                            <tr>
+                                <th>@basketProduct.FilePath</th>
+                                <td>@basketProduct.Name</td>
+                                <td>@basketProduct.Quantity</td>
+                                <td>@basketProduct.Price</td>
+                                <td>@basketProduct.Description</td>
+
+                                <td>
+                                        <a asp-action="delete" asp-controller="basket" asp-route-id="@basketProduct.Id" class="btn btn-outline-danger">Delete</a>
+
+                                </td>
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

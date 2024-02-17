@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Organic Shop project.props" />
+</Project>
