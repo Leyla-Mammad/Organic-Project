@@ -17,7 +17,7 @@ namespace Organic_Shop_project.Models
         public string? FilePath { get; set; }
         public double Price { get; set; }
         public int Quantity { get; set; }
-        public ProductStatus status { get; set; }
+        public Constants.ProductStatus status { get; set; }
         [NotMapped]
         [Required]
         public IFormFile Photo { get; set; }

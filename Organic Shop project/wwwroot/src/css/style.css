@@ -1,0 +1,41 @@
+ * a:hover{
+color: rgb(0, 255, 89);
+transition: 0.4;
+}
+
+
+.dropdown {
+    display:none;
+   background-color: white;
+    width: 60% !important;
+    height: 66% !important;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .dropdown.active {
+        opacity: 1;
+        display: block;
+        overflow: visible;
+    }
+
+
+
+.farm {
+    background-image: url("../img/product13-free-img.jpg");
+    width: 150px;
+    height: 350px;
+}
+.vegetable {
+    background-image: url("../img/product11-free-img.jpg");
+    width: 150px;
+    height: 350px;
+}
+.vegetables {
+    background-image: url("../img/product17-free-img.jpg");
+    width: 150px;
+    height: 350px;
+}

@@ -4,101 +4,103 @@
 
 
 <section style="background-color: rgb(254, 248, 240); padding: 40px; margin: 30px;">
-    <div class="container">
-        <div class="row">
+    <div class="container" style="display:flex; ">
+        <div class="row" style="display:block;">
 
+            <div  style="border: 1px solid black; padding:30px 20px;">
 
+                <div class="Filter">
+                    <form method="get" class="example" asp-controller="Shop" asp-action="Index">
+                  
+                        <div class="form-group">
+                            <input asp-for="@Model.Name" placeholder="Search..">
+                            <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                             <button style="color: #ffffff; background-color: #0b9710; border: none;" type="submit"><i class="fa fa-search"></i></button>
 
-            <div class="col-lg-3" style="border: 1px solid black; padding:30px 20px;">
-
-                <div>
-                    <form class="example" action="action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button style="color: #ffffff; background-color: #0b9710; border: none;" type="submit"><i class="fa fa-search"></i></button>
-                    </form>
+                        </div>
+                      <div>
+                           <div>
+                    <h3 style="margin:20px 0;">Filter by Price</h3>
                 </div>
-                <div style="display: block; padding: 50px 0;">
-                    <h3>Product Categories</h3>
+                           <div class="d-flex"  >
+                                <div class="form-group">
+                            <input asp-for="@Model.MinPrice" style="width:50px; margin:0 5px ;" placeholder="10£">
+                        </div
+                        <div class="form-group ml-3">
+                            <input asp-for="@Model.MaxPrice" style="width:50px; margin: 0 5px;" placeholder="40£">
+                        </div>
+                           </div>
+                      
+                      </div>
+                        <button class="btn btn-outline-primary" style="background-color:green; color:white;border:1px solid green;margin:20px 0;">Submit</button>
+                 </form> 
+                    
+                
+                </div>
+                <div style=" padding: 50px 0; margin-left:20px; width:30%;" class="col-">
+                    <h3 style="margin:0 0 20px 0;">Product Categories</h3>
                     @{
                         foreach (var categories in Model.Categories)
                         {
-                            <div>
-                                <a style="color: #0b9710; font-size: 18px; " data-filter="@categories.Title"
-                                   href="#"><i style="padding-right: 10px;" class="fa-solid fa-utensils"></i><span>@categories.Title</span></a>
-                            </div>
+                                    <div>
+                                        <a style="color: #0b9710; font-size: 18px; " data-filter="@categories.Title"
+                                           href="#"><i style="padding-right: 10px;" class="fa-solid fa-utensils"></i><span>@categories.Title</span></a>
+                                    </div>
                         }
                     }
                 </div>
 
-                <div>
-                    <h3>Filter by Price</h3>
-                </div>
-
             </div>
 
-            <div class="col-lg-1"></div>
             <div class="col-lg-8">
                 <a style="color: black;" href="index.html">Home</a>
                 <span>/ Shop</span>
                 <h1 style="color: #0b9710; margin: 20px 0; font-size: 50px;">SHOP</h1>
-                <ul>
-                    <li>
-                        <div>
-                            <a>
-                     @*            @{
-                                    foreach(var categorycomponent in Model.Categories)
+                
+                <div class=" d-flex justify-content-around" style="flex-wrap:wrap;">
+                         
+                                @{
+                                    foreach(var categoryComponent in Model.Components)
                                     {
-                                        // foreach (var item in categorycomponent.CategoryComponents)
-                                        // {
-                                        //     case: item.status:
-                                        //         <span class="mkdf-pli-new-product">New</span>
-                                        //         break;
-                                        //          case: ProductStatus.Sale:
-                                        //         <span class="mkdf-pli-on-sale">Sale</span>
-                                        //         break;
-                                        //          case: ProductStatus.Sold:
-                                        //         <span class="mkdf-pli-out-of-stock">Sold</span>
-                                        //         break;
+                                        <a style="text-align:center;">
+                                                   <tr class="col-lg-4 text-align-center">
+                                                  
+                                                  <td> <div>
+                                                   
+                                                   <span style="float:right; color:white;background-color: green; border:1px solid green;position:absolute; border-radius:50%; padding:2px; margin: 5px 0 0 5px !important; z-index:100;">@categoryComponent.status</span>
+                                                   <img style="width:250px;height:250px;object-fit:cover; z-index:99; position:relative;" class="img-thumbnail" src="~/src/img/@categoryComponent.FilePath" />
+                                                   </div>
+                                                   </td>
 
-                                        //          case: ProductStatus.None:
-                                        //         break;
-                                        // }
+                                                <td><h6 style="font-weight:300;font-size:13px;">@categoryComponent.Category.Title</h6></td>
 
-                                        // @{
-                                        //     switch (categorycomponent.CategoryComponents)
-                                        //     {
-                                        //         case: ProductStatus.New:
-                                        //         <span class="mkdf-pli-new-product">New</span>
-                                        //         break;
-                                        //          case: ProductStatus.Sale:
-                                        //         <span class="mkdf-pli-on-sale">Sale</span>
-                                        //         break;
-                                        //          case: ProductStatus.Sold:
-                                        //         <span class="mkdf-pli-out-of-stock">Sold</span>
-                                        //         break;
-
-                                        //          case: ProductStatus.None:
-                                        //         break;
-
-                                        //     }
-                                        // }
-                                        <h3>@categorycomponent.Title></h3
-                                        
-                                    
-                                        <img width="300" height="300"  class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" srcset="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-300x300.jpg 300w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-150x150.jpg 150w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-768x768.jpg 768w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-600x600.jpg 600w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-100x100.jpg 100w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted-400x400.jpg 400w, https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2018/06/coffee-asorted.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px">
-
-                                    }
-                                } *@
-                            
-                            </a>
+                                                <td><h5 style="font-size:17px;" >@categoryComponent.Name</h5></td>
+                                                <td>
+                                                    <h6 style="color:green; font-weight:700;">
+                                                        <span class="woocommerce-Price-currencySymbol">£</span>
+                                                        <span>@categoryComponent.Price</span>
+                                                    </h6>
+                                                </td>
+                                                 </tr>
+                                                <button class="addBasketBtn" data-id="@categoryComponent.Id" style="background-color:green; color:white; border: 1px solid green;"><i style="margin: 0  5px 0 0" class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+                                              
 
 
-                        </div>
+                                                 <div class="dropdown " style="width:1200px !important; height: 700px !important">
+                                                 <img>
+                                                 <h3>@categoryComponent.Name</h3>
+                                                 <span class="woocommerce-Price-currencySymbol">£</span><h5>@categoryComponent.Price</h5><span >+Free Shipping</span>
+                                                 <h6>@categoryComponent.Description</h6>
+                                                 <button>@categoryComponent.Quantity</button>
+                                                 
+                                                 </div>  </a>
+                                         }
+                                }
 
-
-                    </li>
-
-                </ul>
+                                
+                                
+                            </div>
+                               
                
             </div>
 
@@ -108,4 +110,28 @@
     </div>
 
 </section>
- 
+
+
+
+                               @section Scripts{
+                                   <script src="~/src/js/Basket.js"></script>
+                                   <script type="text/javascript">
+
+    
+let img_thumb = document.querySelectorAll(".img-thumbnail")
+let dropdown = document.querySelectorAll(".dropdown");
+
+
+                                       img_thumb.forEach((elem) => {
+                                           elem.addEventListener("click", (e) => {
+                                               e.target.parentElement.parentElement.querySelectorAll('.dropdown')[0].classList.toggle("active")
+                                           })
+                                       })
+// document.body.addEventListener("click", function (event) {
+//     if ( !img_thumb.contains(event.target) && !dropdown.contains(event.target)) {
+//     dropdown.classList.remove("active");
+//     }
+//   });
+
+</script>
+                               }

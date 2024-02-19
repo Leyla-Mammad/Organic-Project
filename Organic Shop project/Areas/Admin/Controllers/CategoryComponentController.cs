@@ -26,31 +26,17 @@ namespace Organic_Shop_project.Areas.Admin.Controllers
             _fileservice = fileService;
             _webHostEnvironment = webHostEnvironment;
         }
-        public async Task<IActionResult> Index(CategoryComponentIndexVM model)
-
+        public async Task<IActionResult> Index(List<CategoryComponentIndexVM> model)
         {
-            var categoryComponents = await _db.CategoryComponents.ToListAsync();
+           
+            var categoryComponents = await _db.CategoryComponents.ToListAsync(); 
+            return View(/*categoryComponentIndexVMs*/ categoryComponents);
 
-            return View(categoryComponents);
-          
+        
         }
 
-        //private IQueryable<CategoryComponent> FilterByTitle(string? Title)
-        //{
-        //    return _db.CategoryComponents.Where(p => !string.IsNullOrEmpty(Title) ? p.Name.Contains(Title) : true);
-        //}
-        //private IQueryable<CategoryComponent> FilterByQuantity(int? minquantity, int? maxquantity)
-        //{
-        //    return _db.CategoryComponents.Where(p => (minquantity != null ? p.Quantity >= minquantity : true) && (maxquantity != null ? p.Quantity <= maxquantity : true));
-        //}
-
-        //private IQueryable<CategoryComponent> FilterByCategory(int? categoryId, IQueryable<CategoryComponent> categoryComponents)
-        //{
-
-        //    return categoryComponents.Where(p => categoryId != null ? p.CategoryId >= categoryId : true);
-
-        //}
-        [HttpGet]
+      
+        [HttpGet]  
 
         public async Task<IActionResult> Create()
 
@@ -97,13 +83,20 @@ namespace Organic_Shop_project.Areas.Admin.Controllers
                     ; return View(model);
             }
 
-            int maxSize = 500;
+            int maxSize = 1024;
             if (!_fileservice.CheckSize(model.Photo, maxSize))
             {
 
                 ModelState.AddModelError("Photo", $"Şəklin ölçüsü {maxSize} kb-dan böyükdür. ");
                 return View(model);
             }
+
+            if (model.Photo != null)
+            {
+            await _fileservice.UploadAsync(model.Photo);
+
+            }
+
             var category = await _db.Categories.FindAsync(model.CategoryId);
             if (category == null) return NotFound();
             var categoryComponent = new CategoryComponent()
@@ -171,6 +164,7 @@ namespace Organic_Shop_project.Areas.Admin.Controllers
             dbCategoryComponent.Description = model.Description;
             dbCategoryComponent.CategoryId = model.CategoryId;
 
+            await _db.SaveChangesAsync();
 
 
             //if (model.Photo != null)

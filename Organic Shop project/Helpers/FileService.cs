@@ -15,7 +15,7 @@ namespace Organic_Shop_project.Helpers
         {
             var filename = $"{Guid.NewGuid()}_{file.FileName}";
 
-            var path = Path.Combine(_webHostEnvironment.WebRootPath, "assets/img", filename);
+            var path = Path.Combine(_webHostEnvironment.WebRootPath, "src/img", filename);
 
             using (FileStream fileStream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite))
             {

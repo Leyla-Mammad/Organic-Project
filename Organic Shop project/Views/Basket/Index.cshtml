@@ -27,7 +27,7 @@
                         @foreach (var basketProduct in Model.BasketProducts)
                         {
                             <tr>
-                                <th>@basketProduct.FilePath</th>
+                                <th><img src="~/src/img/@basketProduct.FilePath" /></th>
                                 <td>@basketProduct.Name</td>
                                 <td>@basketProduct.Quantity</td>
                                 <td>@basketProduct.Price</td>

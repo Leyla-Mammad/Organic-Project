@@ -30,11 +30,13 @@ namespace Organic_Shop_project.Controllers
                 FirstOrDefaultAsync(b=>b.User.Id == user.Id);
 
             var model = new BasketIndexVM();
+            model.BasketProducts = new List<BasketProductVM>();
             foreach (var basketProduct in basket.BasketProducts)
             {
                 var product = new BasketProductVM
                 {
-                    Id= basketProduct.CategoryComponentId,
+                    Id = basketProduct.CategoryComponentId,
+                    Description = basketProduct.CategoryComponent.Description,
                     Quantity = basketProduct.Quantity,
                     Stock = basketProduct.CategoryComponent.Quantity,
                     Name = basketProduct.CategoryComponent.Name,
@@ -44,7 +46,7 @@ namespace Organic_Shop_project.Controllers
                 model.BasketProducts.Add(product);
             }
 
-            return View();
+            return View(model);
         }
         public async Task<IActionResult> Add(int id)
         {
@@ -64,7 +66,7 @@ namespace Organic_Shop_project.Controllers
                 await _context.Baskets.AddAsync(userBasket);
                 await _context.SaveChangesAsync();
             }
-            var basketProduct = await _context.BasketProducts.FirstOrDefaultAsync(b => b.CategoryComponentId == id);
+            var basketProduct = await _context.BasketProducts.FirstOrDefaultAsync(b => b.CategoryComponentId == id && b.BasketId==userBasket.Id);
             if (basketProduct == null)
             {
                 basketProduct = new BasketProduct

@@ -10,38 +10,6 @@
                 <h5 class="card-title">Category Component</h5>
                 
 
-               @*  <div class="Filter">
-
-
-                 <form>
-                        <div class="form-group">
-                            <label asp-for="@Model.Name"></label>
-                            <input asp-for="@Model.Name" placeholder="Enter Name">
-                            <span asp-validation-for="@Model.Name" class="text-danger"></span>
-                        </div>
-                      <div>
-                            <div class="form-group">
-                            <label asp-for="@Model.MinQuantity"></label>
-                            <input asp-for="@Model.MinQuantity" placeholder="Enter Name">
-                        </div
-                        <div class="form-group">
-                            <label asp-for="@Model.MaxQuantity"></label>
-                            <input asp-for="@Model.MaxQuantity" placeholder="Enter Name">
-                        </div>
-                         <div class="form-group">
-                            <label asp-for="@Model.CategoryId"></label>
-                            <select asp-for="@Model.CategoryId" asp-items="@Model.Categories" placeholder="Enter Name"></select>
-                            <option value="">Select Category</option>
-                        </div>
-                      </div>
-                        <button>Submit</button>
-                 </form>
-
-
-                </div>
- *@
-
-
                 <div class="col-2">
                     <a asp-controller="CategoryComponent" asp-action="Create" asp-area="admin" class="btn btn-outline-success" style="background-color: green; ">
                         Create Category Component 
@@ -64,20 +32,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var categoryComponent in Model)
+                        @foreach (var categoryComponents in Model)
                         {
                             <tr>
-                                <th>@categoryComponent.Id</th>
-                                <td><img style="width:150px;height:150px;object-fit:cover" class="img-thumbnail" src="~/assets/img/@categoryComponent.FilePath" /></td>
-                                <td>@categoryComponent.Name</td>@*
+                                <th>@categoryComponents.Id</th>
+                                <td><img style="width:150px;height:150px;object-fit:cover" class="img-thumbnail" src="~/src/img/@categoryComponents.FilePath" /></td>
+                                <td>@categoryComponents.Name</td>@*
                             <td>@categoryComponent.Category.Name</td> *@
 
 
 
 
                                 <td>
-                                    <a asp-action="update" asp-controller="categorycomponent" asp-area="admin" asp-route-id="@categoryComponent.Id" class="btn btn-outline-warning">Update</a>
-                                    <form method="post" asp-controller="CategoryComponent" asp-action="Delete" asp-area="Admin" asp-route-id="@categoryComponent.Id">
+                                    <a asp-action="update" asp-controller="categorycomponent" asp-area="admin" asp-route-id="@categoryComponents.Id" class="btn btn-outline-warning">Update</a>
+                                    <form method="post" asp-controller="CategoryComponent" asp-action="Delete" asp-area="Admin" asp-route-id="@categoryComponents.Id">
                                         <button type="submit" class="btn btn-outline-danger">Delete</button>
                                     </form>
                                 </td>

@@ -1,6 +1,61 @@
 ﻿@using Organic_Shop_project.ViewModels.Account;
 @model AccountLoginViewModel
 
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Organicstore</title>
+</head>
+<body style="margin: 0;padding: 0;box-sizing: border-box;overflow-x: hidden;width: 100%; height:100%;">
+    <section class="navbar">
+        <div class="container ">
+            <div class="row" style="width:100%; display: flex; justify-content: center;align-items: center; ">
+                <div class="leftside col-lg-5 col-sm-5" style="display: flex; justify-content: space-between; align-items: center;">
+                    <a class="home-logo col-lg-5" asp-controller="home" asp-action="index"><img style="width: 90%;" src="~/src/img/organic-store-logo5.svg"></a>
+
+                    <div class="col-lg-6" style=" display: flex;justify-content: space-around; align-items: center;">
+                        <a style="color: #011929;  font-size: 17px;" class="col-lg-2" asp-controller="Shop" asp-action="index">Shop</a>
+                        <a style="color: rgb(0, 0, 0);  font-size: 17px;" class="col-lg-2" asp-controller="About" asp-action="index">About</a>
+                        <a style="color: #011929;  font-size: 17px;" class="col-lg-2" asp-controller="Contact" asp-action="index">Contact</a>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="middle col-lg-1 col-sm-1"></div>
+                <div class="middle col-lg-4 col-sm-4">
+                </div>
+                <div class="rightside col-lg-2 col-sm-2" style="display: flex; justify-content: space-around; align-items: center;">
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            <span>@User.Identity.Name</span>
+                            <a asp-action="log-out" asp-controller="Account" style="color: #0b9710;"><i class="bx bx-log-out bx-sm bx-tada-hover text-primary"></i></a>
+
+                        }
+                        else
+                        {
+                            <a asp-action="login" asp-controller="Account" style="color: #0b9710;"><i class="bx bx-log-in bx-sm bx-tada-hover text-primary"></i></a>
+
+
+                        }
+                    }
+                    <a style="color: #0b9710;"><i class="fa-solid fa-heart"></i></a>
+                    <a asp-action="index" asp-controller="Basket" style="color: #0b9710;"><i class="fa-solid fa-basket-shopping"></i></a>
+                    <a asp-action="login" asp-controller="Account" style="color: #0b9710;;"><i class="fa-solid fa-user"></i></a>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
 <section class="vh-100 gradient-custom">
     <form asp-action="Login" asp-controller="Account">
         <div class="container py-5 h-100">
@@ -35,7 +90,6 @@
 
 
 
-                                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
 
                                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
 
@@ -57,14 +111,34 @@
 </section>
 
 <style>
+        body a {
+            text-decoration: none !important;
+        }
 
+        .socialmedia a {
+            color: rgb(170, 169, 169);
+        }
+
+        .middle-img::before:hover {
+            position: absolute;
+            --background-overlay: '';
+            background-color: var(--e-global-color-astglobalcolor2);
+        }
+
+        .rightside:hover {
+            color: #0b9710;
+        }
 
     .gradient-custom {
         /* fallback for old browsers */
-        background: #6a11cb;
+            background: #0b9710;
         /* Chrome 10-25, Safari 5.1-6 */
-        background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+            background: -webkit-linear-gradient(to right, #0de3ac,#98e05f);
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+            background: linear-gradient(to right, #0de3ac, #98e05f)
     }
 </style>
+
+
+</body>
+</html>
