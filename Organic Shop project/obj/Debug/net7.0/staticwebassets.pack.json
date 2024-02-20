@@ -3321,6 +3321,10 @@
       "PackagePath": "staticwebassets\\src\\js\\Basket.js"
     },
     {
+      "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\js\\Loadmore.js",
+      "PackagePath": "staticwebassets\\src\\js\\Loadmore.js"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Organic Shop project.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

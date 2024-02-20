@@ -24,23 +24,33 @@ namespace Organic_Shop_project.Models
 
                 var categories = await _Db.Categories.Include(x => x.CategoryComponents).ToListAsync();
 
+
+
                 var categoryComponent = FilterByTitle(model.Name);
                 categoryComponent = FilterByQuantity(model.MinPrice, model.MaxPrice, categoryComponent);
                 categoryComponent = FilterByCategory(model.CategoryId, categoryComponent);
 
                 model = new ShopIndexViewModel
                 {
-                    Components = categoryComponent,
+                    Components = categoryComponent.Take(9),
                     Categories = categories,
                     Categoriess = await _Db.Categories.Select(ct => new SelectListItem
                     {
                         Value = ct.Id.ToString(),
                         Text = ct.Title,
-                    }).ToListAsync()    
+                    }).ToListAsync() 
+                    
+                    
                 };
+
 
                 return View(model);
               
+            }
+            public async Task<IActionResult> Loadmore()
+            {
+                var categoryComponent = await _Db.CategoryComponents.Skip(9).Take(9).ToListAsync();
+                return PartialView("ProductComponentPartialView", categoryComponent);
             }
 
             private IQueryable<CategoryComponent> FilterByTitle(string? Title)

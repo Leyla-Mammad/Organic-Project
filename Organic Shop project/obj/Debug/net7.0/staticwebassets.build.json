@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GqXX2qcwX4K+4LXUatspxADgXeSnEaItqScZFyHMJAY=",
+  "Hash": "bVbfGJFL08EmJoZ94GwBMVSwyxRky9srFuBbra9nwS0=",
   "Source": "Organic Shop project",
   "BasePath": "_content/Organic Shop project",
   "Mode": "Default",
@@ -14125,6 +14125,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\js\\Basket.js"
+    },
+    {
+      "Identity": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\js\\Loadmore.js",
+      "SourceId": "Organic Shop project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\",
+      "BasePath": "_content/Organic Shop project",
+      "RelativePath": "src/js/Loadmore.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\js\\Loadmore.js"
     }
   ]
 }

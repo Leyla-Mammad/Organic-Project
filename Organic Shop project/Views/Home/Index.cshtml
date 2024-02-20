@@ -81,32 +81,68 @@
 <section style="text-align: center; margin: 130px 0 ; font-weight: 900;">
 
     <h1>Best Selling Products</h1>
-    <img style="width: 5%;margin: 20px 0 0 0;" src=".\src\img\logo-leaf-new.png" alt="">
+    <img style="width: 5%;margin: 20px 0 20px 0;" src=".\src\img\logo-leaf-new.png" alt="">
 
 
-    <div style="margin-bottom: -160px;  " class="producttypes-img">
-        <img style="width: 150px;" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/basil-leaf.png" alt="">
+   
+
+    <div class=" d-flex justify-content-around" style="flex-wrap:wrap; margin:0 90px;">
+
+        @{
+            foreach (var categoryComponent in Model.CategoryComponents)
+            {
+                <a style="text-align:center;">
+                    <tr class="col-lg-4 text-align-center">
+
+                        <td>
+                            <div>
+
+                                <span style="float:right; color:white;background-color: green; border:1px solid green;position:absolute; border-radius:50%; padding:2px; margin: 5px 0 0 5px !important; z-index:100;">@categoryComponent.status</span>
+                                <img style="width:250px;height:250px;object-fit:cover; z-index:99; position:relative;" class="img-thumbnail" src="~/src/img/@categoryComponent.FilePath" />
+                            </div>
+                        </td>
+
+                        <td><h6 style="font-weight:300;font-size:13px;">@categoryComponent.Category.Title</h6></td>
+
+                        <td><h5 style="font-size:17px;">@categoryComponent.Name</h5></td>
+                        <td>
+                            <h6 style="color:green; font-weight:700;">
+                                <span class="woocommerce-Price-currencySymbol">£</span>
+                                <span>@categoryComponent.Price</span>
+                            </h6>
+                        </td>
+                    </tr>
+                    <button class="addBasketBtn" data-id="@categoryComponent.Id" style="background-color:green; color:white; border: 1px solid green;"><i style="margin: 0  5px 0 0" class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+
+                </a>
+            }
+        }
+
+
+
     </div>
 </section>
 
 
 
-<section class="product-types " style="background-color: rgb(249, 245, 239); padding: 100px 0;">
-
-
+<section class="product-types " style="background-color: rgb(249, 245, 239); padding:0 0 100px 0;">
+   
+    <div style="display:flex;justify-content:center;padding-bottom:100px;" class="producttypes-img">
+        <img style="width: 150px;" src="https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2021/03/basil-leaf.png" alt="">
+    </div>
     <div class="container">
         <div class="row" style="display: flex; justify-content: space-evenly; align-items: center; padding:0 50px;">
-            <div class="col-lg-3 farm" style="padding: 70px 25px;  background-size: cover; border: solid 1px rgb(255, 255, 255);">
+            <div class="col-lg-3 farm" style="padding: 30px 25px;  background-size: cover; border: solid 1px rgb(255, 255, 255);">
                 <h3>Farm Fresh Fruits</h3>
                 <h6 style="font-weight: 400; font-size:16px; color: #4c4c4d;">Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</h6>
                 <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i class="fa-solid fa-cart-shopping" style="padding-right: 10px;"></i>SHOP NOW</span></button>
             </div>
-            <div class="col-lg-3 vegetable" style="padding: 70px 25px;  background-size: cover; border: solid 1px white;">
+            <div class="col-lg-3 vegetable" style="padding: 30px 25px;  background-size: cover; border: solid 1px white;">
                 <h3>Fresh Vegetables</h3>
                 <h6 style="font-weight: 400; font-size:16px; color: #4c4c4d;">Aliquam porta justo nibh, id laoreet sapien sodales vitae justo. </h6>
                 <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i style="padding-right: 10px;" class="fa-solid fa-cart-shopping"></i>SHOP NOW</span></button>
             </div>
-            <div class="col-lg-3 vegetables" style="padding: 70px 25px; background-size: cover; border: solid 1px white;">
+            <div class="col-lg-3 vegetables" style="padding: 30px 25px; background-size: cover; border: solid 1px white;">
                 <h3>Organic Legume</h3>
                 <h6 style="font-weight: 400; font-size:16px; color: #4c4c4d;">Phasellus sed urna mattis, viverra libero sed, aliquam est.</h6>
                 <button style="background-color: #6a9739; margin: 20px 0; padding:10px 30px; border: none ; border-radius: 5px;"><span style="color: white;"><i style="padding-right: 10px;" class="fa-solid fa-cart-shopping"></i>SHOP NOW</span></button>
@@ -136,7 +172,43 @@
 
 <section class="trending-products" style="text-align: center; margin: 130px 0 ;">
     <h3 style=" font-weight: 500; font-size: 40px;">Trending Products</h3>
-    <img style="width: 5%;margin: 20px 0 0 0;" src=".\src\img\logo-leaf-new.png" alt="">
+    <img style="width: 5%;margin: 20px 0 40px 0;" src=".\src\img\logo-leaf-new.png" alt="">
+
+    <div class=" d-flex justify-content-around" style="flex-wrap:wrap; margin:0 90px;">
+
+        @{
+            foreach (var categoryComponent in Model.CategoryComponents)
+            {
+                <a style="text-align:center;">
+                    <tr class="col-lg-4 text-align-center">
+
+                        <td>
+                            <div>
+
+                                <span style="float:right; color:white;background-color: green; border:1px solid green;position:absolute; border-radius:50%; padding:2px; margin: 5px 0 0 5px !important; z-index:100;">@categoryComponent.status</span>
+                                <img style="width:250px;height:250px;object-fit:cover; z-index:99; position:relative;" class="img-thumbnail" src="~/src/img/@categoryComponent.FilePath" />
+                            </div>
+                        </td>
+
+                        <td><h6 style="font-weight:300;font-size:13px;">@categoryComponent.Category.Title</h6></td>
+
+                        <td><h5 style="font-size:17px;">@categoryComponent.Name</h5></td>
+                        <td>
+                            <h6 style="color:green; font-weight:700;">
+                                <span class="woocommerce-Price-currencySymbol">£</span>
+                                <span>@categoryComponent.Price</span>
+                            </h6>
+                        </td>
+                    </tr>
+                    <button class="addBasketBtn" data-id="@categoryComponent.Id" style="background-color:green; color:white; border: 1px solid green;"><i style="margin: 0  5px 0 0" class="fa-solid fa-cart-plus"></i>Add to Cart</button>
+
+                </a>
+            }
+        }
+
+
+
+    </div>
 
 </section>
 
