@@ -4,8 +4,6 @@
 
 
         $.ajax({
-            
-
                 method: "POST",
                 url: "/basket/add",
             data: {

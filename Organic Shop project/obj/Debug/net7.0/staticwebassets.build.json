@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bVbfGJFL08EmJoZ94GwBMVSwyxRky9srFuBbra9nwS0=",
+  "Hash": "M65KyWg1+WpuZUNIRDs5xwThYkq2UZf9SYlLJtAzEuo=",
   "Source": "Organic Shop project",
   "BasePath": "_content/Organic Shop project",
   "Mode": "Default",
@@ -12444,6 +12444,23 @@
       "OriginalItemSpec": "wwwroot\\src\\img\\2c9d7a83-7745-439c-b333-70cc4d032707_coffee-asorted.jpg"
     },
     {
+      "Identity": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\32275c6d-b7a4-4040-b954-b98409916433_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg",
+      "SourceId": "Organic Shop project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\",
+      "BasePath": "_content/Organic Shop project",
+      "RelativePath": "src/img/32275c6d-b7a4-4040-b954-b98409916433_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\img\\32275c6d-b7a4-4040-b954-b98409916433_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg"
+    },
+    {
       "Identity": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\43636dd0-8680-4df4-9c75-80aecd292d95_red-chillies.jpg",
       "SourceId": "Organic Shop project",
       "SourceType": "Discovered",
@@ -12510,6 +12527,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\img\\5ddb8ac4-12d7-409b-a49e-9a3fcab7b46f_cashew-butter-500.jpg"
+    },
+    {
+      "Identity": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\616f48e0-d0de-41ef-ac4a-2ff8f4958d35_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg",
+      "SourceId": "Organic Shop project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\",
+      "BasePath": "_content/Organic Shop project",
+      "RelativePath": "src/img/616f48e0-d0de-41ef-ac4a-2ff8f4958d35_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\img\\616f48e0-d0de-41ef-ac4a-2ff8f4958d35_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg"
     },
     {
       "Identity": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\645e33e9-6c61-4f96-b056-5bda4603bbda_sony_sel2470gm_fe_24_70mm_f_2_8_gm_1222774.jpg",
@@ -14127,6 +14161,23 @@
       "OriginalItemSpec": "wwwroot\\src\\js\\Basket.js"
     },
     {
+      "Identity": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\js\\JavaScript.js",
+      "SourceId": "Organic Shop project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\",
+      "BasePath": "_content/Organic Shop project",
+      "RelativePath": "src/js/JavaScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\js\\JavaScript.js"
+    },
+    {
       "Identity": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\js\\Loadmore.js",
       "SourceId": "Organic Shop project",
       "SourceType": "Discovered",
@@ -14142,6 +14193,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\src\\js\\Loadmore.js"
+    },
+    {
+      "Identity": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\js\\Wishlist.js",
+      "SourceId": "Organic Shop project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\",
+      "BasePath": "_content/Organic Shop project",
+      "RelativePath": "src/js/Wishlist.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\src\\js\\Wishlist.js"
     }
   ]
 }

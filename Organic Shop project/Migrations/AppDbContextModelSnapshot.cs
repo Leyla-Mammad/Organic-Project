@@ -375,6 +375,52 @@ namespace Organic_Shop_project.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Organic_Shop_project.Models.Wishlist", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Wishlists");
+                });
+
+            modelBuilder.Entity("Organic_Shop_project.Models.WishlistProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CategoryComponentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WishlistId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryComponentId");
+
+                    b.HasIndex("WishlistId");
+
+                    b.ToTable("WishlistProducts");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -478,6 +524,36 @@ namespace Organic_Shop_project.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Organic_Shop_project.Models.Wishlist", b =>
+                {
+                    b.HasOne("Organic_Shop_project.Models.User", "User")
+                        .WithOne("Wishlist")
+                        .HasForeignKey("Organic_Shop_project.Models.Wishlist", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Organic_Shop_project.Models.WishlistProduct", b =>
+                {
+                    b.HasOne("Organic_Shop_project.Models.CategoryComponent", "CategoryComponent")
+                        .WithMany("WishlistProducts")
+                        .HasForeignKey("CategoryComponentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Organic_Shop_project.Models.Wishlist", "Wishlist")
+                        .WithMany("WishlistProducts")
+                        .HasForeignKey("WishlistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CategoryComponent");
+
+                    b.Navigation("Wishlist");
+                });
+
             modelBuilder.Entity("Organic_Shop_project.Models.Basket", b =>
                 {
                     b.Navigation("BasketProducts");
@@ -493,12 +569,22 @@ namespace Organic_Shop_project.Migrations
                     b.Navigation("BasketProducts");
 
                     b.Navigation("ProductPhotos");
+
+                    b.Navigation("WishlistProducts");
                 });
 
             modelBuilder.Entity("Organic_Shop_project.Models.User", b =>
                 {
                     b.Navigation("Basket")
                         .IsRequired();
+
+                    b.Navigation("Wishlist")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Organic_Shop_project.Models.Wishlist", b =>
+                {
+                    b.Navigation("WishlistProducts");
                 });
 #pragma warning restore 612, 618
         }

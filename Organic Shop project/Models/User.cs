@@ -6,6 +6,7 @@ namespace Organic_Shop_project.Models
     {
         public string FullName { get; set; }    
         public Basket Basket { get; set; }
+        public Wishlist Wishlist { get; set; }  
     }
 }
  

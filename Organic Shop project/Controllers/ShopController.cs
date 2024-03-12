@@ -47,10 +47,11 @@ namespace Organic_Shop_project.Models
                 return View(model);
               
             }
+            [HttpGet]
             public async Task<IActionResult> Loadmore()
             {
                 var categoryComponent = await _Db.CategoryComponents.Skip(9).Take(9).ToListAsync();
-                return PartialView("ProductComponentPartialView", categoryComponent);
+                return PartialView("ProductsPartialView", categoryComponent);
             }
 
             private IQueryable<CategoryComponent> FilterByTitle(string? Title)

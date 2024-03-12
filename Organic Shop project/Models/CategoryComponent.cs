@@ -31,6 +31,7 @@ namespace Organic_Shop_project.Models
         
         public ICollection<ProductPhoto> ProductPhotos { get;  set;}
         public ICollection<BasketProduct> BasketProducts { get; set; }
+        public ICollection<WishlistProduct> WishlistProducts { get; set;}
 
 
     }

@@ -2925,6 +2925,10 @@
       "PackagePath": "staticwebassets\\src\\img\\2c9d7a83-7745-439c-b333-70cc4d032707_coffee-asorted.jpg"
     },
     {
+      "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\32275c6d-b7a4-4040-b954-b98409916433_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg",
+      "PackagePath": "staticwebassets\\src\\img\\32275c6d-b7a4-4040-b954-b98409916433_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg"
+    },
+    {
       "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\43636dd0-8680-4df4-9c75-80aecd292d95_red-chillies.jpg",
       "PackagePath": "staticwebassets\\src\\img\\43636dd0-8680-4df4-9c75-80aecd292d95_red-chillies.jpg"
     },
@@ -2939,6 +2943,10 @@
     {
       "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\5ddb8ac4-12d7-409b-a49e-9a3fcab7b46f_cashew-butter-500.jpg",
       "PackagePath": "staticwebassets\\src\\img\\5ddb8ac4-12d7-409b-a49e-9a3fcab7b46f_cashew-butter-500.jpg"
+    },
+    {
+      "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\616f48e0-d0de-41ef-ac4a-2ff8f4958d35_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg",
+      "PackagePath": "staticwebassets\\src\\img\\616f48e0-d0de-41ef-ac4a-2ff8f4958d35_sandisk-ixpand-dual-drive-flip-usb-31-gen-1-lightning-sdix90n.jpg"
     },
     {
       "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\img\\645e33e9-6c61-4f96-b056-5bda4603bbda_sony_sel2470gm_fe_24_70mm_f_2_8_gm_1222774.jpg",
@@ -3321,8 +3329,16 @@
       "PackagePath": "staticwebassets\\src\\js\\Basket.js"
     },
     {
+      "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\js\\JavaScript.js",
+      "PackagePath": "staticwebassets\\src\\js\\JavaScript.js"
+    },
+    {
       "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\js\\Loadmore.js",
       "PackagePath": "staticwebassets\\src\\js\\Loadmore.js"
+    },
+    {
+      "Id": "C:\\WORKSPACE - C#\\Organic Shop project\\Organic Shop project\\wwwroot\\src\\js\\Wishlist.js",
+      "PackagePath": "staticwebassets\\src\\js\\Wishlist.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Organic Shop project.Microsoft.AspNetCore.StaticWebAssets.props",

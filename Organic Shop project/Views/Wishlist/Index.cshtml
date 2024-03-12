@@ -1,0 +1,49 @@
+﻿@using Organic_Shop_project.ViewModels.Wishlist;
+@model WishlistIndexVM
+
+
+<div class="col-lg-12" style="width:100%;">
+    <div class="card-wishlist">
+        <div class="card-body-wishlist">
+            <div style="display:flex;justify-content:space-between; align-items: center;margin-bottom:5px;">
+                <h5 class="card-title">Wishlist</h5>
+
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Photo</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Action</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var wishlistProduct in Model.WishlistProducts)
+                        {
+                            <tr>
+                                <th><img style="width:20%;" src="~/src/img/@wishlistProduct.FilePath" /></th>
+                                <td>@wishlistProduct.Name</td>
+                                <td>@wishlistProduct.Quantity</td>
+                                <td style="width:10%;">@wishlistProduct.Price<span><i class="fa-solid fa-euro-sign"></i></span></td>
+
+                                <td>
+                                    <a asp-action="delete" asp-controller="wishlist" asp-route-id="@wishlistProduct.Id" class="btn btn-outline-danger">Delete</a>
+
+                                </td>
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

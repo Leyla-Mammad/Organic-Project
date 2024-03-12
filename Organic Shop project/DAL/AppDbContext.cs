@@ -15,6 +15,8 @@ namespace Organic_Shop_project.DAL
         public DbSet<ProductPhoto> ProductPhotos { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketProduct> BasketProducts { get; set; }
+        public DbSet<Wishlist> Wishlists { get; set; }
+        public DbSet<WishlistProduct> WishlistProducts { get; set;}
 
     }
 }
